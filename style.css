@@ -105,3 +105,44 @@ section{
     font-weight: 700;
     line-height: 18px;
 }
+
+@media (max-width: 480px) {
+    html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Tira o fundo roxo */
+body {
+    background: none;
+}
+
+/* Logo posicionada dentro da box */
+.logo {
+    display: none;
+}
+
+/* Box ocupa 100% da tela */
+.box1 {
+    width: 100%;
+    height: 100%;
+    background: #F4F4F4;
+    border-radius: 0; /* ocupa tudo, sem arredondar */
+    padding: 40px 24px 23px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+label{
+    width: 100%;
+}
+
+section{
+    height: auto;
+    width: 100%;
+}
+}
