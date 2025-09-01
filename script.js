@@ -1,5 +1,7 @@
 const convertButton = document.querySelector(".convert-button");
-const currencyselect = document.querySelector(".moeda2");
+const currencyselect1 = document.querySelector(".moeda1");
+const currencyselect2 = document.querySelector(".moeda2");
+
 
 // faz a conversão da moeda, mudança de moeda e conversão
 function convertValues() {
@@ -9,39 +11,39 @@ function convertValues() {
   );
   const currencyValueConverted = document.querySelector(".currency-value");
 
-  console.log(currencyselect.value);
+  console.log(currencyselect2.value);
 
   const dolarToday = 5.43;
   const euroToday = 6.35;
   const libraToday = 7.34;
   const bitToday = 587723.16;
 
-  if (currencyselect.value == "real") {
+  if (currencyselect2.value == "real") {
     alert("TROQUE A MOEDA")
   }
 
-  if (currencyselect.value == "dolar") {
+  if (currencyselect2.value == "dolar") {
     currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
       style: "currency",
       currency: "USD",
     }).format(inputCurrencyValue / dolarToday);
   }
 
-  if (currencyselect.value == "euro") {
+  if (currencyselect2.value == "euro") {
     currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
       style: "currency",
       currency: "EUR",
     }).format(inputCurrencyValue / euroToday);
   }
 
-  if (currencyselect.value == "libra") {
+  if (currencyselect2.value == "libra") {
     currencyValueConverted.innerHTML = new Intl.NumberFormat("en-GB", {
       style: "currency",
       currency: "GBP",
     }).format(inputCurrencyValue / libraToday);
   }
 
-  if (currencyselect.value == "bitcoin") {
+  if (currencyselect2.value == "bitcoin") {
     currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
       style: "currency",
       currency: "BTC",
@@ -86,5 +88,5 @@ function changeCurrency(){
 }
 
 
-currencyselect.addEventListener("change", changeCurrency)
+currencyselect2.addEventListener("change", changeCurrency)
 convertButton.addEventListener("click", convertValues);
